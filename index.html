@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Internet Seguro</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111827;
+    color:white;
+}
+
+/* MENU */
+
+nav{
+    background:#0f172a;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    color:cyan;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:cyan;
+}
+
+/* INICIO */
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200");
+
+    background-size:cover;
+    background-position:center;
+}
+
+header h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+header p{
+    width:70%;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+header button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:cyan;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+header button:hover{
+    transform:scale(1.05);
+}
+
+/* SECCIONES */
+
+section{
+    padding:100px 10%;
+}
+
+.titulo{
+    text-align:center;
+    margin-bottom:50px;
+    color:cyan;
+    font-size:40px;
+}
+
+/* TARJETAS */
+
+.contenedor{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#1e293b;
+    width:300px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:cyan;
+}
+
+.card p{
+    line-height:1.5;
+}
+
+/* CONSEJOS */
+
+.lista{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.item{
+    background:#1e293b;
+    padding:20px;
+    border-left:5px solid cyan;
+    border-radius:10px;
+}
+
+/* QUIZ */
+
+.quiz{
+    text-align:center;
+}
+
+.quiz h3{
+    margin-bottom:20px;
+}
+
+.quiz button{
+    padding:15px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.quiz button:hover{
+    transform:scale(1.05);
+}
+
+#resultado{
+    margin-top:20px;
+    color:cyan;
+    font-size:20px;
+}
+
+/* INTEGRANTES */
+
+.integrantes{
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    padding:30px;
+    text-align:center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    header h1{
+        font-size:35px;
+    }
+
+    header p{
+        width:95%;
+    }
+
+    .titulo{
+        font-size:30px;
+    }
+
+    section{
+        padding:80px 5%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<nav>
+
+    <h2>EEST N°2</h2>
+
+    <ul>
+        <li><a href="#problemas">Problemas</a></li>
+        <li><a href="#consejos">Consejos</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+    </ul>
+
+</nav>
+
+<!-- INICIO -->
+
+<header>
+
+    <h1>Ciberbullying, Sexting y Juego Online</h1>
+
+    <p>
+        Internet puede ser divertido y útil,
+        pero también tiene riesgos.
+        Es importante aprender a usar las redes,
+        los juegos y la tecnología de manera segura.
+    </p>
+
+    <a href="#problemas">
+        <button>Ver Más</button>
+    </a>
+
+</header>
+
+<!-- PROBLEMAS -->
+
+<section id="problemas">
+
+    <h2 class="titulo">Problemas en Internet</h2>
+
+    <div class="contenedor">
+
+        <div class="card">
+
+            <h3>Ciberbullying</h3>
+
+            <p>
+                Es el acoso o maltrato mediante mensajes,
+                redes sociales o videojuegos online.
+
+                Se trata de cuando una persona (o grupo)
+                molesta, humilla, amenaza o intimida a otra
+                usando internet o dispositivos electrónicos.
+
+                <br><br>
+
+                <strong>Ejemplos de ciberbullying:</strong><br>
+
+                • Enviar mensajes ofensivos o amenazas.<br>
+                • Compartir fotos o videos vergonzosos sin permiso.<br>
+                • Difundir rumores o mentiras en redes sociales.<br>
+                • Crear perfiles falsos para burlarse de alguien.<br>
+                • Excluir a alguien de grupos en línea de manera intencional.<br><br>
+
+                <strong>Características importantes:</strong><br>
+
+                • Puede ocurrir en cualquier momento, no solo en la escuela.<br>
+                • Puede llegar a muchas personas rápidamente.<br>
+                • A veces es anónimo, lo que dificulta saber quién lo hace.<br><br>
+
+                <strong>Consecuencias:</strong><br>
+
+                El ciberbullying puede causar tristeza, ansiedad,
+                baja autoestima e incluso problemas más graves
+                como depresión.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Sexting</h3>
+
+            <p>
+                El sexting es el envío o intercambio de mensajes,
+                fotos o videos de contenido íntimo o sexual
+                mediante celulares, redes sociales o aplicaciones
+                de mensajería.
+
+                Esto puede incluir imágenes, audios o textos
+                privados compartidos entre personas.
+
+                <br><br>
+
+                <strong>Ejemplos de sexting:</strong><br>
+
+                • Enviar fotos o videos íntimos.<br>
+                • Compartir mensajes con contenido sexual.<br>
+                • Mandar audios o imágenes privadas por redes sociales o chats.<br>
+                • Reenviar contenido íntimo de otra persona sin permiso.<br><br>
+
+                <strong>Características importantes:</strong><br>
+
+                • El contenido puede difundirse rápidamente en internet.<br>
+                • Una vez enviado, es difícil controlar quién puede verlo.<br>
+                • Compartir imágenes privadas sin consentimiento puede causar daño emocional y problemas legales.<br><br>
+
+                <strong>Consecuencias:</strong><br>
+
+                El sexting puede provocar vergüenza, acoso,
+                pérdida de privacidad y afectar la salud emocional
+                y la reputación de una persona.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Juego Online</h3>
+
+            <p>
+                Los juegos de apuesta online son plataformas
+                en internet donde las personas arriesgan dinero
+                en juegos o apuestas con la intención de ganar premios.
+
+                Aunque pueden parecer entretenidos, también
+                presentan riesgos importantes, especialmente
+                para niños y adolescentes.
+
+                <br><br>
+
+                <strong>Ejemplos de los peligros de los juegos de apuesta online:</strong><br>
+
+                • Pérdida de dinero de manera rápida.<br>
+                • Posible adicción al juego.<br>
+                • Estrés, ansiedad y problemas emocionales.<br>
+                • Estafas o robo de información personal.<br>
+                • Acceso a contenido no adecuado para menores.<br><br>
+
+                <strong>Ejemplos de los peligros de los juegos online en general:</strong><br>
+
+                • Contacto con personas desconocidas.<br>
+                • Ciberbullying o acoso dentro de los juegos.<br>
+                • Uso excesivo que afecta el descanso y el rendimiento escolar.<br>
+                • Compras no autorizadas dentro de las plataformas.<br>
+                • Riesgo de compartir información privada en internet.<br><br>
+
+                <strong>Importancia de la prevención:</strong><br>
+
+                Conocer los riesgos ayuda a utilizar internet
+                y los videojuegos de manera segura y responsable,
+                protegiendo la salud emocional, la privacidad
+                y la seguridad personal.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONSEJOS -->
+
+<section id="consejos">
+
+    <h2 class="titulo">Consejos de Seguridad</h2>
+
+    <div class="lista">
+
+        <div class="item">
+            🔒 No compartas tus contraseñas.
+        </div>
+
+        <div class="item">
+            👤 No hables con desconocidos.
+        </div>
+
+        <div class="item">
+            📱 Configurá la privacidad de tus redes.
+        </div>
+
+        <div class="item">
+            🚨 Si sufrís acoso online, pedí ayuda.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section id="quiz">
+
+    <h2 class="titulo">Mini Quiz</h2>
+
+    <div class="quiz">
+
+        <h3 id="pregunta"></h3>
+
+        <button onclick="responder(true)" id="btn1">
+            Sí
+        </button>
+
+        <button onclick="responder(false)" id="btn2">
+            No
+        </button>
+
+        <p id="resultado"></p>
+
+        <br><br>
+
+        <button onclick="siguientePregunta()" id="siguiente">
+            Siguiente Pregunta
+        </button>
+
+    </div>
+
+</section>
+
+<!-- INTEGRANTES -->
+
+<section class="integrantes">
+
+    <h2 class="titulo">Integrantes</h2>
+
+    <p>
+        Veliz Ángeles - Godoy Liz - Sandoval Kiara - Paz Pía
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        Expo Seguridad e Higiene - 2026
+    </p>
+
+</footer>
+
+<script>
+
+// PREGUNTAS DEL QUIZ
+
+let preguntas = [
+
+    {
+        texto:"¿Es seguro compartir tu contraseña con amigos?",
+        correcta:false
+    },
+
+    {
+        texto:"¿Debes pedir ayuda si sufrís ciberbullying?",
+        correcta:true
+    },
+
+    {
+        texto:"¿Está bien aceptar solicitudes de desconocidos?",
+        correcta:false
+    },
+
+    {
+        texto:"¿Es importante configurar la privacidad de tus redes?",
+        correcta:true
+    },
+
+    {
+        texto:"¿Los juegos online pueden tener riesgos?",
+        correcta:true
+    },
+
+    {
+        texto:"¿Está bien compartir fotos privadas con cualquiera?",
+        correcta:false
+    },
+
+    {
+        texto:"¿Debes bloquear y reportar cuentas que te acosen?",
+        correcta:true
+    }
+
+];
+
+let actual = 0;
+
+// MOSTRAR PREGUNTA
+
+mostrarPregunta();
+
+function mostrarPregunta(){
+
+    document.getElementById("pregunta").innerHTML =
+    preguntas[actual].texto;
+
+    document.getElementById("resultado").innerHTML = "";
+
+}
+
+// RESPONDER
+
+function responder(respuesta){
+
+    if(respuesta == preguntas[actual].correcta){
+
+        document.getElementById("resultado").innerHTML =
+        "✅ Correcto";
+
+    }else{
+
+        document.getElementById("resultado").innerHTML =
+        "❌ Incorrecto";
+
+    }
+
+}
+
+// SIGUIENTE PREGUNTA
+
+function siguientePregunta(){
+
+    actual++;
+
+    if(actual >= preguntas.length){
+
+        document.getElementById("pregunta").innerHTML =
+        "🎉 Terminaste el quiz";
+
+        document.getElementById("resultado").innerHTML =
+        "Gracias por participar";
+
+        document.getElementById("btn1").style.display = "none";
+
+        document.getElementById("btn2").style.display = "none";
+
+        document.getElementById("siguiente").style.display = "none";
+
+    }else{
+
+        mostrarPregunta();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
